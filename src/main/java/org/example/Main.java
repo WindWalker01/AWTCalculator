@@ -3,9 +3,10 @@ package org.example;
 public class Main {
 	public static void main(String[] args) {
 		CalWindow window  = new CalWindow(500, 600);
-		
-		CalTextField entryField = new CalTextField(0, 180, 450, 50);
-		
+
+		CalTextField entryField = new CalTextField(0, 180, 450, 50, 50);
+		CalTextField formulaField = new CalTextField(0, 130, 450, 50, 25);
+
 		CalButton btnNegate = new CalButton(10 ,530, "+/-", entryField);
 		CalButton btn0 = new CalButton(130,530, "0", entryField);
 		CalButton btnDot = new CalButton(250,530, ".", entryField);
@@ -63,6 +64,7 @@ public class Main {
 		window.add(btnCE);
 		
 		window.add(entryField);
+		window.add(formulaField);
 		
 		
 	}
