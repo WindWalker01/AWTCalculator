@@ -34,9 +34,7 @@ public class DataParser {
 	//
 	//
 	public String ShowResult(){
-		
-		
+		StringResult = String.valueOf(Math.round(Numresult));
 		return StringResult;
 	}
-	
 }
