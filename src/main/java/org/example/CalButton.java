@@ -13,6 +13,9 @@ public class CalButton extends Button {
 	
 	private CalTextField entryField;
 	
+	private String firstInput = "";
+	private String secondInput = "";
+	
 	public CalButton(int posX, int posY, String label, CalTextField txt){
 		this.m_posX = posX;
 		this.m_posY = posY;
@@ -25,10 +28,19 @@ public class CalButton extends Button {
 		addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				entryField.setText("Hello World");
 				
+				DataParser parser = new DataParser();
+				
+				entryField.setText(parser.ShowResult());
+//				firstInput = getLabel();
+			
 			}
 		});
+		
+		
+		
+		
+		
 		
 	}
 
