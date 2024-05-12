@@ -1,42 +1,90 @@
 package org.example;
 
 public class DataParser {
-	
-	
-	
-	public String StringResult;
-	
-	public float num1;
-	public float num2;
-	public float Numresult;
-	
-	//Nathalie
-	//
-	// Convert to number para makapag calculate
-	//
-	public void Calculate(String fistInput, String secondInput, String operator){
-		//Convert
-//		num1 = firstInput;
-//		num2 = secondInput;
 		
-		//Calculate
+		public double Negated;
+		public String StringResult;
+		public double numParse1;
+		public double numParse2;
+		public int operParse;
+		public double numResult;
 		
-		if(operator == "+"){
-			Numresult = num1 + num2;
+		//Nathalie
+		//
+		// Convert to number para makapag calculate
+		//
+		public void Calculate(String firstInput, String secondInput, String operator){
+			//Convert
+//			num1 = firstInput;
+//			num2 = secondInput;
+			numParse1 = Integer.parseInt(firstInput);
+			numParse2 = Integer.parseInt(secondInput);
+			
+			
+			//Calculate
+			switch (operator) {
+				case "+":
+					numResult = numParse1+numParse2;
+					System.out.printf("%.2f", numResult);
+					break;
+				case "-":
+					numResult = numParse1-numParse2;
+					System.out.printf("%.2f", numResult);
+					break;
+				case "*":
+					numResult = numParse1*numParse2;
+					System.out.printf("%.2f", numResult);
+					break;
+				case "/":
+					numResult = numParse1/numParse2;
+					System.out.printf("%.2f", numResult);
+					break;
+				case "+/-":
+					Negated = -numParse1;
+					System.out.printf("%.2f", Negated);
+					break;
+				case "%":
+					numResult = numParse1*0.01;
+					System.out.printf("%.2f", numResult);
+					break;
+				case "=":
+					if(operator.equals("+")) {
+						numResult = numParse1+numParse2;
+						System.out.printf("%.2f", numResult); }
+					if(operator.equals("-")){
+						numResult = numParse1-numParse2;
+						System.out.printf("%.2f", numResult); }
+					if(operator.equals("*")) {
+						numResult = numParse1*numParse2;
+						System.out.printf("%.2f", numResult); }
+					if(operator.equals("/")){
+						numResult = numParse1/numParse2;
+						System.out.printf("%.2f", numResult); }
+					if(operator.equals("%")){
+						numResult = numParse1*0.01;
+						System.out.printf("%.2f", numResult); }
+					break;
+				
+				}
+			
 		}
-	}
-	
-	
-	//Lei
-	//
-	// This Shows the Result for the calculated arithmetic
-	// Basta kapag tapos na mag add, minus, etc.. show the result
-	//
-	//
-	public String ShowResult(){
+				
 		
 		
-		return StringResult;
-	}
+		
+		
+		//Lei
+		//
+		// This Shows the Result for the calculated arithmetic
+		// Basta kapag tapos na mag add, minus, etc.. show the result
+		//
+		//
+		public String ShowResult(){
+			
+			
+			return StringResult;
+		}
+		
 	
+
 }
