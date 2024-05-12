@@ -10,11 +10,11 @@ public class DataParser {
 	public float num2;
 	public float numResult;
 	
-	public static String m_firstInput = "";
+	private static String m_firstInput = "";
 	
-	public static String m_secondInput = "";
+	private static String m_secondInput = "";
 	
-	public static String m_operator = "";
+	private static String m_operator = "";
 	
 	//Nathalie
 	//
@@ -47,13 +47,13 @@ public class DataParser {
 	}
 	
 	public void SetFirstInput(String input){
-		m_firstInput = input;
+		m_firstInput = m_firstInput.concat(input);
 		
 		System.out.println("First: " + m_firstInput);
 	}
 	
 	public void SetSecondInput(String input){
-		m_secondInput = input;
+		m_secondInput = m_secondInput.concat(input);
 		System.out.println("Second: " + m_secondInput);
 	}
 	
@@ -61,5 +61,20 @@ public class DataParser {
 		m_operator = input;
 		System.out.println("Operator: " + m_operator);
 	}
+	
+	
+	public String GetFirstInput(){
+		return m_firstInput;
+	}
+	
+	public String GetSecondInput(){
+		return m_secondInput;
+	}
+	
+	public String GetOperator(){
+		return m_operator;
+	}
+	
+	
 	
 }
