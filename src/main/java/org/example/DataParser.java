@@ -81,8 +81,8 @@ public class DataParser {
 		//
 		public String ShowResult(){
 			
-			
-			return StringResult;
+			StringResult = String.valueOf(Math.round(Numresult));
+		  return StringResult;
 		}
 		
 	
