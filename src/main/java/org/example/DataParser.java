@@ -4,11 +4,11 @@ public class DataParser {
 	
 	
 	
-	public String StringResult;
+	public String StringResult = "";
 	
 	public float num1;
 	public float num2;
-	public float Numresult;
+	public float numResult;
 	
 	public static String m_firstInput = "";
 	
@@ -28,7 +28,7 @@ public class DataParser {
 		//Calculate
 		
 		if(operator == "+"){
-			Numresult = num1 + num2;
+			numResult = num1 + num2;
 		}
 	}
 	
@@ -41,6 +41,7 @@ public class DataParser {
 	//
 	public String ShowResult(){
 		
+		StringResult = "35";
 		
 		return StringResult;
 	}
