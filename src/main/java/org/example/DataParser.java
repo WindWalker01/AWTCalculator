@@ -41,19 +41,19 @@ public class DataParser {
 	//
 	public String ShowResult(){
 		
-		StringResult = "35";
+		StringResult = "Hello World!";
 		
 		return StringResult;
 	}
 	
 	public void SetFirstInput(String input){
-		m_firstInput = m_firstInput.concat(input);
+		m_firstInput = input;
 		
 		System.out.println("First: " + m_firstInput);
 	}
 	
 	public void SetSecondInput(String input){
-		m_secondInput = m_secondInput.concat(input);
+		m_secondInput = input;
 		System.out.println("Second: " + m_secondInput);
 	}
 	
@@ -74,6 +74,23 @@ public class DataParser {
 	public String GetOperator(){
 		return m_operator;
 	}
+	
+	public void ResetFirstInput(){
+		m_firstInput = "0";
+		System.out.println("First: " + m_firstInput);
+	}
+	
+	public void ResetSecondInput(){
+		m_secondInput = "0";
+		System.out.println("Second: " + m_secondInput);
+	}
+	
+	public void ResetOperator(){
+		m_operator = "";
+		System.out.println("Operator: " + m_operator);
+	}
+	
+	
 	
 	
 	
