@@ -10,6 +10,12 @@ public class DataParser {
 	public float num2;
 	public float Numresult;
 	
+	public static String m_firstInput = "";
+	
+	public static String m_secondInput = "";
+	
+	public static String m_operator = "";
+	
 	//Nathalie
 	//
 	// Convert to number para makapag calculate
@@ -37,6 +43,22 @@ public class DataParser {
 		
 		
 		return StringResult;
+	}
+	
+	public void SetFirstInput(String input){
+		m_firstInput = input;
+		
+		System.out.println("First: " + m_firstInput);
+	}
+	
+	public void SetSecondInput(String input){
+		m_secondInput = input;
+		System.out.println("Second: " + m_secondInput);
+	}
+	
+	public void SetOperator(String input){
+		m_operator = input;
+		System.out.println("Operator: " + m_operator);
 	}
 	
 }
