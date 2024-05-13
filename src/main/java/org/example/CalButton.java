@@ -90,7 +90,7 @@ public class CalButton extends Button {
 					
 				} else if(getLabel().equals("C")){
 					
-					m_parser.SetSecondInput("0");
+					m_parser.SetFirstInput("0");
 					m_parser.SetSecondInput("0");
 					m_parser.ResetOperator();
 					
