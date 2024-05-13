@@ -46,12 +46,12 @@ public class DataParser {
 	}
 	
 	public void ResetFirstInput(){
-		m_firstInput = "0";
+		m_firstInput = "";
 		System.out.println("First: " + m_firstInput);
 	}
 	
 	public void ResetSecondInput(){
-		m_secondInput = "0";
+		m_secondInput = "";
 		System.out.println("Second: " + m_secondInput);
 	}
 	
