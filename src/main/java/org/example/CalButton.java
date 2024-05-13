@@ -41,6 +41,7 @@ public class CalButton extends Button {
 					if(m_parser.GetOperator().isEmpty()){
 						m_parser.SetOperator(getLabel());
 					}
+					
 					m_entryField.setText("0");
 					
 					if(!m_parser.GetSecondInput().isEmpty()){
@@ -48,6 +49,7 @@ public class CalButton extends Button {
 						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
 						m_entryField.setText(m_parser.ShowResult());
 					}else{
+						m_parser.SetOperator(getLabel());
 						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
 					}
 					
