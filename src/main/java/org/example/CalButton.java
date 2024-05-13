@@ -36,27 +36,47 @@ public class CalButton extends Button {
 				
 //				entryField.setText(parser.ShowResult());
 				
-				if(getLabel().equals("+") || getLabel().equals("-") || getLabel().equals("X") || getLabel().equals("/")  || getLabel().equals("%")) {
+				if(getLabel().equals("+") || getLabel().equals("-") || getLabel().equals("x") || getLabel().equals("/")) {
 					
-					m_parser.SetOperator(getLabel());
+					if(m_parser.GetOperator().isEmpty()){
+						m_parser.SetOperator(getLabel());
+						
+					}
 					m_entryField.setText("0");
 					
 					if(!m_parser.GetSecondInput().isEmpty()){
 						CalCulateResult();
-						
+						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
 						m_entryField.setText(m_parser.ShowResult());
-						m_formulaField.setText(m_parser.ShowResult() + m_parser.GetOperator());
 					}else{
 						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
 					}
+					
 				
 				
 				
-				
-				}else if(getLabel().equals("=")){
-					m_entryField.setText(m_parser.ShowResult());
+				}else if(getLabel().equals("+/-") || getLabel().equals("%")){
+					
+					if(m_parser.GetOperator().isEmpty()){
+						m_parser.SetOperator(getLabel());
+						m_parser.ResetSecondInput();
+						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
+						CalCulateResult();
+						
+						m_parser.ResetOperator();
+					}else{
+						CalCulateResult();
+						m_parser.SetOperator(getLabel());
+						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
+						CalCulateResult();
+					}
+					
+					
+					
+				} else if(getLabel().equals("=")){
 					m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator() + m_parser.GetSecondInput() + getLabel());
 					CalCulateResult();
+					
 					
 					m_parser.ResetOperator();
 					
@@ -121,6 +141,9 @@ public class CalButton extends Button {
 		// Set the result of the calculation to the first input and then reset the second input to 0.
 		m_parser.SetFirstInput(m_parser.ShowResult());
 		m_parser.ResetSecondInput();
+		m_parser.SetOperator(getLabel());
+		
+		m_entryField.setText(m_parser.ShowResult());
 	}
 
 }

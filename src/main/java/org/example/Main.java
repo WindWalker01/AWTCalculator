@@ -27,7 +27,7 @@ public class Main {
 		CalButton btn7 = new CalButton(10,320, "7", entryField, formulaField);
 		CalButton btn8 = new CalButton(130,320, "8", entryField, formulaField);
 		CalButton btn9 = new CalButton(250,320, "9", entryField, formulaField);
-		CalButton btnMultiply = new CalButton(370,320, "X", entryField, formulaField);
+		CalButton btnMultiply = new CalButton(370,320, "x", entryField, formulaField);
 		
 		
 		CalButton btnDivide = new CalButton(370, 250, "/", entryField, formulaField);

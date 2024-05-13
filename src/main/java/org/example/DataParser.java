@@ -69,35 +69,35 @@ public class DataParser {
 			//Convert
 //			num1 = firstInput;
 //			num2 = secondInput;
-			numParse1 = Integer.parseInt(firstInput);
-			numParse2 = Integer.parseInt(secondInput);
+			numParse1 = Double.parseDouble(firstInput);
+			numParse2 = Double.parseDouble(secondInput);
 			
 			
 			//Calculate
 			switch (operator) {
 				case "+":
 					numResult = numParse1+numParse2;
-					System.out.printf("%.2f", numResult);
+//					System.out.printf("%.2f", numResult);
 					break;
 				case "-":
 					numResult = numParse1-numParse2;
-					System.out.printf("%.2f", numResult);
+//					System.out.printf("%.2f", numResult);
 					break;
-				case "*":
+				case "x":
 					numResult = numParse1*numParse2;
-					System.out.printf("%.2f", numResult);
+//					System.out.printf("%.2f", numResult);
 					break;
 				case "/":
 					numResult = numParse1/numParse2;
-					System.out.printf("%.2f", numResult);
+//					System.out.printf("%.2f", numResult);
 					break;
 				case "+/-":
-					Negated = -numParse1;
-					System.out.printf("%.2f", Negated);
+					numResult = -numParse1;
+//					System.out.printf("%.2f", Negated);
 					break;
 				case "%":
-					numResult = numParse1*0.01;
-					System.out.printf("%.2f", numResult);
+					numResult = numParse1/100;
+//					System.out.printf("%.2f", numResult);
 					break;
 				case "=":
 					if(operator.equals("+")) {
@@ -129,7 +129,7 @@ public class DataParser {
 		//
 		public String ShowResult(){
 			if(numResult % 1 != 0){
-				StringResult = String.valueOf(String.format("%.1f,", numResult));
+				StringResult = String.valueOf(String.format("%.2f", numResult));
 			}else{
 				StringResult = String.valueOf(Math.round(numResult));
 			}
