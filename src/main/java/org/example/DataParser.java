@@ -1,14 +1,66 @@
 package org.example;
 
 public class DataParser {
+
+	private static String m_firstInput = "";
+	
+	private static String m_secondInput = "";
+	
+	private static String m_operator = "";
 		
-		public double Negated;
-		public String StringResult;
-		public double numParse1;
-		public double numParse2;
-		public int operParse;
-		public double numResult;
+	public double Negated;
+	public String StringResult;
+	public double numParse1;
+	public double numParse2;
+	public int operParse;
+  public double numResult;
+  
+
+	public void SetFirstInput(String input){
+		m_firstInput = input;
 		
+		System.out.println("First: " + m_firstInput);
+	}
+	
+	public void SetSecondInput(String input){
+		m_secondInput = input;
+		System.out.println("Second: " + m_secondInput);
+	}
+	
+	public void SetOperator(String input){
+		m_operator = input;
+		System.out.println("Operator: " + m_operator);
+	}
+	
+	
+	public String GetFirstInput(){
+		return m_firstInput;
+	}
+	
+	public String GetSecondInput(){
+		return m_secondInput;
+	}
+	
+	public String GetOperator(){
+		return m_operator;
+	}
+	
+	public void ResetFirstInput(){
+		m_firstInput = "0";
+		System.out.println("First: " + m_firstInput);
+	}
+	
+	public void ResetSecondInput(){
+		m_secondInput = "0";
+		System.out.println("Second: " + m_secondInput);
+	}
+	
+	public void ResetOperator(){
+		m_operator = "";
+		System.out.println("Operator: " + m_operator);
+	}
+	
+	
 		//Nathalie
 		//
 		// Convert to number para makapag calculate
@@ -83,4 +135,5 @@ public class DataParser {
 			}
 		  return StringResult;
 		}
+
 }
