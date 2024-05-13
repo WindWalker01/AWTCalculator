@@ -65,7 +65,8 @@ public class Main {
 		
 		window.add(entryField);
 		window.add(formulaField);
-		
+
+
 		
 	}
 }
