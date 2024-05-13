@@ -8,11 +8,9 @@ public class DataParser {
 	
 	private static String m_operator = "";
 		
-	public double Negated;
 	public String StringResult;
 	public double numParse1;
 	public double numParse2;
-	public int operParse;
   public double numResult;
   
 
