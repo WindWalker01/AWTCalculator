@@ -59,9 +59,14 @@ public class CalButton extends Button {
 				}else if(getLabel().equals("+/-") || getLabel().equals("%")){
 					
 					if(m_parser.GetOperator().isEmpty()){
+						
 						m_parser.SetOperator(getLabel());
 						m_parser.SetSecondInput("0");
-						m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
+						if(getLabel().equals("+/-")){
+							m_formulaField.setText("negate(" + m_parser.GetFirstInput() + ")");
+						}else{
+							m_formulaField.setText(m_parser.GetFirstInput() + m_parser.GetOperator());
+						}
 						CalCulateResult();
 						
 						m_parser.ResetOperator();

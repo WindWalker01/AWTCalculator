@@ -94,7 +94,7 @@ public class DataParser {
 //					System.out.printf("%.2f", Negated);
 					break;
 				case "%":
-					numResult = numParse1/100;
+					numResult = numParse1*0.01;
 //					System.out.printf("%.2f", numResult);
 					break;
 				case "=":
