@@ -85,8 +85,8 @@ public class CalButton extends Button {
 					
 				} else if(getLabel().equals("C")){
 					
-					m_parser.ResetFirstInput();
-					m_parser.ResetSecondInput();
+					m_parser.SetSecondInput("0");
+					m_parser.SetSecondInput("0");
 					m_parser.ResetOperator();
 					
 					m_entryField.setText("0");
@@ -96,12 +96,16 @@ public class CalButton extends Button {
 				}else if(getLabel().equals("CE")){
 					
 					if(m_parser.GetOperator().isEmpty()){
-						m_parser.ResetFirstInput();
+						m_parser.SetFirstInput("0");
 					}else{
-						m_parser.ResetSecondInput();
+						m_parser.SetSecondInput("0");
 					}
 					
 					m_entryField.setText("0");
+					
+					if(m_formulaField.getText().contains("=")){
+						m_formulaField.setText("0");
+					}
 				
 				
 				}else{
