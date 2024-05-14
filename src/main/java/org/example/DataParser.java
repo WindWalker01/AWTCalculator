@@ -126,7 +126,7 @@ public class DataParser {
 		//
 		//
 		public String ShowResult(){
-			if(numResult % 1 != 0){
+			if(numResult % 3 != 0){
 				StringResult = String.valueOf(String.format("%.2f", numResult));
 			}else{
 				StringResult = String.valueOf(Math.round(numResult));
