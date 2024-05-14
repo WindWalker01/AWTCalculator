@@ -11,7 +11,7 @@ public class DataParser {
 	public String StringResult;
 	public double numParse1;
 	public double numParse2;
-  public double numResult;
+  	public double numResult;
   
 
 	public void SetFirstInput(String input){
