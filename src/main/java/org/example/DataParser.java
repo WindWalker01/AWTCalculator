@@ -11,7 +11,7 @@ public class DataParser {
 	public String StringResult;
 	public double numParse1;
 	public double numParse2;
-  public double numResult;
+  	public double numResult;
   
 
 	public void SetFirstInput(String input){
@@ -126,7 +126,7 @@ public class DataParser {
 		//
 		//
 		public String ShowResult(){
-			if(numResult % 1 != 0){
+			if(numResult % 2 != 0){
 				StringResult = String.valueOf(String.format("%.2f", numResult));
 			}else{
 				StringResult = String.valueOf(Math.round(numResult));
